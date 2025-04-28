@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+     <label for="">NAME</label>
+     <input type="text" placeholder="Name"><br>
+     <label for="">TNEB</label>
+     <input type="text" placeholder="TNEB ID"><br>
+     <label for="" id="unit">UNIT</label>
+     <input type="text" placeholder="UNIT"><br>
+     <button onclick="cal()">CAL</button>
+     <p id="total"></p>
+       
+   <script>
+     function cal(){
+        var unit= Number (document.getElementById('unit').value)
+        let total=0
+        if(unit>50 && unit<=100){
+            total = unit*2
+        }
+        else if(unit>100 && unit<=200){
+            total =unit *5
+        }
+        else if(unit>200){
+            total = unit*10
+        }
+
+        document.getElementById("total").innerText="total unit"+total
+     }
+   </script>
+</body>
+
+</html
